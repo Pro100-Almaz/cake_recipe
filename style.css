@@ -1,0 +1,379 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+}
+
+body {
+  display: flexbox;
+  align-items: center;
+  flex-direction: column;
+  margin: 52px 27% 24px 22%;
+}
+
+main {
+  margin-bottom: 93px;
+}
+
+.topic {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+  margin-bottom: 12px;
+  width: 100%;
+  color: #000000;
+}
+
+.description {
+  display: flex;
+  margin-bottom: 36px;
+  color: #000000;
+}
+
+.description svg {
+  display: block;
+  margin-top: 6px;
+}
+
+.description-text {
+  display: block;
+  max-width: 592px;
+  margin-left: 12px;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4f4f4f;
+}
+
+.cake-photo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 48px;
+}
+
+.ingredients {
+  display: grid;
+  grid-template-columns: 60% 20%;
+  gap: 17%;
+  margin-bottom: 28px;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredients-list .header {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333333;
+  margin-bottom: 32px;
+}
+
+.ingredients-list .part1 {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.list-item input {
+  align-self: flex-start;
+  margin-top: 4px;
+  margin-right: 17px;
+}
+
+.list-item .item {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 12px;
+}
+
+.ingredients-table {
+  display: block;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  width: 216px;
+  height: 367px;
+  padding-top: 61px;
+  padding-left: 43px;
+}
+
+.ingredients-table .item {
+  display: grid;
+  grid-template-columns: 22% 70%;
+  margin-bottom: 43px;
+}
+
+.ingredients-table .item img {
+  height: 25px;
+  width: 25px;
+}
+
+.ingredients-table .item .fact {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredients-table .item .fact :first-child {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  text-transform: uppercase;
+  color: #bdbdbd;
+}
+
+.ingredients-table .item .fact :last-child {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #f2994a;
+}
+
+.instructions {
+  counter-reset: section;
+  margin-bottom: 57px;
+}
+
+.instructions p {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 28px;
+}
+
+.instructions .item::before {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  background: #f2994a;
+  border-radius: 6px;
+  counter-increment: section;
+  content: counter(section);
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  padding: auto;
+  align-content: center;
+  justify-content: center;
+}
+
+.instructions .item {
+  display: grid;
+  grid-template-columns: 8% 92%;
+  gap: 15px;
+  max-width: 528px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin-bottom: 31px;
+}
+
+.link-source {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+footer {
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #bdbdbd;
+  text-align: center;
+  margin-bottom: 24px;
+  margin-top: auto;
+}
+
+.mob-ingredients-table {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  body {
+    margin: 52px 19% 24px 15%;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    margin: 52px 12% 24px 7%;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    margin: 52px 5% 24px 5%;
+  }
+
+  .ingredients-table {
+    display: none;
+  }
+
+  .cake-photo {
+    margin-bottom: 30px;
+  }
+
+  .ingredients {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-bottom: 30px;
+  }
+
+  .mob-ingredients-table {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    margin-bottom: 30px;
+  }
+
+  .mob-ingredients-table .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .mob-ingredients-table .item1 img {
+    height: 13px;
+    width: 13px;
+  }
+
+  .mob-ingredients-table .item1 {
+    display: grid;
+    grid-template-columns: 5% 70%;
+    margin-bottom: 20px;
+  }
+
+  .mob-ingredients-table .item {
+    width: 90px;
+    display: grid;
+    grid-template-columns: 22% 70%;
+    gap: 10px;
+  }
+
+  .mob-ingredients-table .item img {
+    height: 13px;
+    width: 13px;
+  }
+
+  .mob-ingredients-table .item .fact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mob-ingredients-table .item .fact :first-child {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    text-transform: uppercase;
+    color: #bdbdbd;
+  }
+
+  .mob-ingredients-table .item .fact :last-child {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #333333;
+  }
+
+  .mob-ingredients-table .item1 .fact :first-child {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 10px;
+    text-transform: uppercase;
+    color: #bdbdbd;
+  }
+
+  .mob-ingredients-table .item1 .fact :last-child {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    color: #f2994a;
+  }
+
+  .topic {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .description-text {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .ingredients-list .header {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .ingredients-list .part1 {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .list-item .item {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .instructions p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .instructions .item {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .link-source {
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  footer {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
